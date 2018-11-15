@@ -1,34 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".SummaryActivity">
+    tools:context=".SummaryActivity"
+    android:gravity="center">
 
     <TextView
-        android:id="@+id/tvStudent"
-        android:layout_width="match_parent"
-        android:layout_height="51dp"
-        android:baselineAligned="false"
-        android:text=""/>
+        android:id="@+id/tvIme"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tvPrezime"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
+
+    <TextView
+        android:id="@+id/tvPrezime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvIme"
+        app:layout_constraintLeft_toRightOf="@+id/tvIme"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+
+        />
+
+    <TextView
+        android:id="@+id/tvDatum"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintTop_toBottomOf="@+id/tvIme"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/tvGodina"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Upisana godina:"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDatum"
+        app:layout_constraintRight_toLeftOf="@+id/tvGod"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"/>
+
+    <TextView
+        android:id="@+id/tvGod"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvGodina"
+        app:layout_constraintLeft_toRightOf="@+id/tvGodina"
+        android:layout_marginRight="16dp"/>
+
+    <TextView
+        android:id="@+id/tvPredmet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Upisan kolegij:"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvGodina"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"/>
 
     <TextView
         android:id="@+id/tvKolegij"
-        android:layout_width="match_parent"
-        android:layout_height="49dp"
-        android:text=""
-        app:layout_constraintTop_toBottomOf="@+id/tvStudent"/>
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintLeft_toRightOf="@+id/tvPredmet"
+        app:layout_constraintTop_toTopOf="@+id/tvPredmet"
+        app:layout_constraintRight_toLeftOf="@+id/tvProfesor"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
+
+    <TextView
+        android:id="@+id/tvProfesor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintTop_toTopOf="@+id/tvKolegij"
+        app:layout_constraintLeft_toRightOf="@+id/tvKolegij"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"/>
+
+    <TextView
+        android:id="@+id/tvPred"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Predavanja"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvKolegij"
+        app:layout_constraintRight_toLeftOf="@+id/tvPredavanja"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"/>
+
+    <TextView
+        android:id="@+id/tvPredavanja"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvPred"
+        app:layout_constraintLeft_toRightOf="@+id/tvPred"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        />
 
     <Button
-        android:id="@+id/btnSend"
+        android:id="@+id/btnDone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="goToActivity1"
-        android:text="Registriraj"
-        tools:layout_editor_absoluteX="140dp"
-        tools:layout_editor_absoluteY="120dp"
-        app:layout_constraintTop_toBottomOf="@+id/tvKolegij"
-        />
-</LinearLayout>
+        android:text="Pošalji"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/tvLabosi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Vježbe:"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPred"
+        app:layout_constraintRight_toLeftOf="@+id/tvVjezbe"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
+
+    <TextView
+        android:id="@+id/tvVjezbe"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvLabosi"
+        app:layout_constraintLeft_toRightOf="@+id/tvLabosi"
+        android:layout_marginRight="16dp"/>
+</android.support.constraint.ConstraintLayout>
