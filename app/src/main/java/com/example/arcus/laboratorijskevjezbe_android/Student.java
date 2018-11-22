@@ -1,16 +1,17 @@
 package com.example.arcus.laboratorijskevjezbe_android;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+public final class Student {
+    private String Name;
+    private String Surname;
+    public Student( String name, String surname){
+        this.Name = name;
+        this.Surname = surname;
+    }
+    public String getName() {
+        return Name;
+    }
 
-public class Student extends AppCompatActivity {
-    private String sIme;
-    private String sPrezime;
-    private String sDatum;
-
-    public Student(String ime, String prezime, String datum) {
-        sIme = ime;
-        sPrezime = prezime;
-        sDatum = datum;
+    public String getSurname() {
+        return Surname;
     }
 }
