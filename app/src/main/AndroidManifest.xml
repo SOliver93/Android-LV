@@ -20,7 +20,10 @@
         <activity android:name=".SummaryActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".Student" />
-        <activity android:name=".Naslov"></activity>
+        <activity android:name=".Naslov" />
+        <activity android:name=".CreateNewRecordActivity" />
+        <activity android:name=".FragmentViewPagerAdapter" />
+        <activity android:name=".Fragments.FirstFragment"></activity>
     </application>
 
 </manifest>
