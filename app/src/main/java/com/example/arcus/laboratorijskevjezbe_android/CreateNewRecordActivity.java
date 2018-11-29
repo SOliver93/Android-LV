@@ -9,9 +9,8 @@ public class CreateNewRecordActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_create_new_record);
-
+        setContentView(R.layout.activity_first_fragment);
         ViewPager viewPager = findViewById(R.id.viewPager);
-        viewPager.setAdapter();
+        viewPager.setAdapter(new FragmentViewPagerAdapter());
     }
 }
