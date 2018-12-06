@@ -1,31 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/student_layout">
 
-    <TextView
-        android:id="@+id/tvStudentI"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="16dp"/>
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
 
-    <TextView
-        android:id="@+id/tvStudentP"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvStudentI"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginLeft="16dp"/>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp">
+            <TextView
+                android:id="@+id/textviewStudentiIme"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="25dp"
+                android:text="      " />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp">
+            <TextView
+                android:id="@+id/textviewStudentiPrezime"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="25dp"
+                android:text="      " />
+        </RelativeLayout>
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
