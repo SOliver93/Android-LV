@@ -1,5 +1,27 @@
 <resources>
-    <string name="app_name">laboratorijskevjezbe-android</string>
-    <string name="Dalje">Dalje</string>
-    <string name="Unesi">Unesi</string>
+    <string name="app_name">Student</string>
+    //buttons
+    <string name="send">Pošalji</string>
+    <string name="ok">U redu</string>
+    <string name="signin">Upiši</string>
+    //text ili hint varijable
+    <string name="title">Studenti</string>
+    <string name="addnew">Dodaj novoga</string>
+    <string name="name">Ime</string>
+    <string name="lastname">Prezime</string>
+    <string name="birthdate">Datum rođenja</string>
+    <string name="date">Datum</string>
+    <string name="subject">Kolegij</string>
+    <string name="professor">Profesor</string>
+    <string name="year">Godina</string>
+    <string name="classes">Broj predavanja:</string>
+    <string name="practice">Broj vježbi:</string>
+    <string name="currentyear">Upisana godina:</string>
+    <string name="currentsubject">Upisan kolegij:</string>
+    //spinner
+    <string-array name="langagues">
+        <item>Hrvatski</item>
+        <item>English</item>
+        <item>Magyar</item>
+    </string-array>
 </resources>

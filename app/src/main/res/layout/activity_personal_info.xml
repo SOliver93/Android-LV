@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/btnOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ok"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/tlIme"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tlPrezime"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        >
+
+        <EditText
+            android:id="@+id/etIme"
+            style="@style/edittext"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:hint="name"
+            android:textSize="12dp"
+            android:inputType="textPersonName"
+            />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/tlPrezime"
+        android:layout_width="0dp"
+        android:layout_height="34dp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tlIme"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        >
+        <EditText
+            android:id="@+id/etPrezime"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:hint="@string/lastname"
+            android:textSize="12dp"
+            android:inputType="textPersonName" />
+    </android.support.design.widget.TextInputLayout>
+    <TextView
+        android:id="@+id/tvDatum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/birthdate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tlDatum"
+        app:layout_constraintTop_toTopOf="@+id/tlDatum"
+        app:layout_constraintBottom_toBottomOf="@+id/tlDatum"
+        android:layout_marginStart="16dp"/>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/tlDatum"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tlPrezime"
+        app:layout_constraintBottom_toBottomOf="@id/tvDatum"
+        app:layout_constraintStart_toEndOf="@id/tvDatum"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"
+        >
+        <EditText
+            android:id="@+id/etDatum"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:hint="@string/date"
+            android:textSize="12dp"
+            android:inputType="textPersonName"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <View
+        android:id="@+id/vLinijaJedna"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintTop_toBottomOf="@id/imageView" />
+    <View
+        android:id="@+id/vLinijaDruga"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintTop_toBottomOf="@id/tlIme" />
+    <View
+        android:id="@+id/vLinijaTreca"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintTop_toBottomOf="@id/tlDatum" />
+
+</android.support.constraint.ConstraintLayout>

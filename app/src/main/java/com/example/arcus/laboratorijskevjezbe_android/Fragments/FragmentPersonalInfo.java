@@ -11,35 +11,30 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
-import com.example.mateokosta.myapplication.R;
-import com.example.mateokosta.myapplication.listeners.PersonalInfoListener;
+import com.example.arcus.laboratorijskevjezbe_android.listeners.DateListener;
+import com.example.arcus.laboratorijskevjezbe_android.listeners.FirstNameListener;
+import com.example.arcus.laboratorijskevjezbe_android.listeners.LastNameListener;
+import com.example.arcus.laboratorijskevjezbe_android.R;
 
-public class PersonalInfoFragment extends Fragment {
+public class FragmentPersonalInfo extends Fragment
+{
+    public static FragmentPersonalInfo newInstance() {
 
-   public static PersonalInfoFragment newInstance()
-   {
-       /*omogucuje da se ne otvori fragment bez parametara firstName i lastName*/
-       Bundle args = new Bundle();
-
-       PersonalInfoFragment fragment = new PersonalInfoFragment();
-       fragment.setArguments(args);
-       return fragment;
-   }
-
-   EditText etName;
-   EditText etSurname;
-   EditText etDatumRodenja;
-
-    public PersonalInfoListener personalInfoListener;
+        Bundle args = new Bundle();
+        FragmentPersonalInfo fragment = new FragmentPersonalInfo();
+        fragment.setArguments(args);
+        return fragment;
+    }
+    public FirstNameListener Listener;
+    public LastNameListener nameListener;
+    public DateListener dateListener;
+    EditText etIme, etPrezime, etDatum ;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        super.onCreateView(inflater,container,savedInstanceState);
-        View view=inflater.inflate(R.layout.fragment_personal_info,container,false);
-        etName=view.findViewById(R.id.etName);
-        etSurname=view.findViewById(R.id.etSurname);
-        etDatumRodenja=view.findViewById(R.id.etDatumRodenja);
-        etName.addTextChangedListener(new TextWatcher() {
+        View view = inflater.inflate(R.layout.activity_personal_info, container, false);
+        etIme =  view.findViewById(R.id.etIme);
+        etIme.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -52,13 +47,14 @@ public class PersonalInfoFragment extends Fragment {
 
             @Override
             public void afterTextChanged(Editable s) {
-                if (personalInfoListener != null) {
-                    personalInfoListener.setName(s.toString());
+                if (Listener != null) {
+                    Listener.setFirstName(s.toString());
                 }
 
             }
         });
-        etSurname.addTextChangedListener(new TextWatcher() {
+        etPrezime =  view.findViewById(R.id.etPrezime);
+        etPrezime.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -71,13 +67,14 @@ public class PersonalInfoFragment extends Fragment {
 
             @Override
             public void afterTextChanged(Editable s) {
-                if (personalInfoListener != null) {
-                    personalInfoListener.setLastName(s.toString());
+                if (nameListener != null) {
+                    nameListener.setLastName(s.toString());
                 }
 
             }
         });
-        etDatumRodenja.addTextChangedListener(new TextWatcher() {
+        etDatum =  view.findViewById(R.id.etDatum);
+        etDatum.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -90,28 +87,19 @@ public class PersonalInfoFragment extends Fragment {
 
             @Override
             public void afterTextChanged(Editable s) {
-                if (personalInfoListener != null) {
-                    personalInfoListener.setDate(s.toString());
+                if (dateListener != null) {
+                    dateListener.setDate(s.toString());
                 }
 
             }
         });
         return view;
     }
-
     @Override
-    public void onResume() {
-        super.onResume();
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-    }
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        personalInfoListener=null;
+    public void onDestroy() {
+        super.onDestroy();
+        nameListener = null;
+        dateListener = null;
+        Listener = null;
     }
 }
