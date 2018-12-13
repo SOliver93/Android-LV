@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">laboratorijskevjezbe-android</string>
+    <string name="Dalje">Dalje</string>
+    <string name="Unesi">Unesi</string>
 </resources>
