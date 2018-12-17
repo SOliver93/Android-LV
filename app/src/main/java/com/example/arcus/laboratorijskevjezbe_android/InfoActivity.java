@@ -19,11 +19,5 @@ public class InfoActivity extends AppCompatActivity {
         viewPager.setAdapter(new FragmentAdapter(getSupportFragmentManager()));
 
         btnEnd = findViewById(R.id.btnEnd);
-
-        /**Ovdje se app crasha
-        btnEnd.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) { startActivity(new Intent(InfoActivity.this, MainActivity.class));
-            }
-        });*/
     }
 }
