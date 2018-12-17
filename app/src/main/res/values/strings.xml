@@ -1,3 +1,32 @@
 <resources>
-    <string name="app_name">laboratorijskevjezbe-android</string>
+    <string name="app_name">PMA_LV</string>
+    <string name="ime_hint">Unesite ime</string>
+    <string name="prezime_hint">Unesite prezime</string>
+    <string name="datum_hint">Unesite datum rođenja</string>
+    <string name="datum">Datum rođenja:</string>
+
+    <string name="ime">Ime</string>
+    <string name="prezime">Prezime</string>
+
+    <string name="predmet_hint">Predmet</string>
+    <string name="profesor_hint">Profesor</string>
+    <string name="godina_hint">Godina</string>
+    <string name="godina">Akademska godina:</string>
+    <string name="ects">ECTS:</string>
+    <string name="predavanja">Predavanja (h):</string>
+    <string name="lv">LV (h):</string>
+
+    <string name="btn_dalje">Dalje</string>
+    <string name="btn_kraj">Kraj</string>
+    <string name="btn_spremi">Spremi</string>
+    <string name="btn_student">Dodaj studenta</string>
+
+    <string name="spinner_text">Odaberite jezik</string>
+
+    <string-array name="jezik_array">
+        <item>Hrvatski</item>
+        <item>Engleski</item>
+        <item>Mađarski</item>
+    </string-array>
+
 </resources>

@@ -1,26 +1,235 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".StudentInfoActivity">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+tools:context=".StudentInfoActivity">
 
-    <EditText
-        android:id="@+id/etKolegij"
+<android.support.design.widget.TextInputLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintStart_toEndOf="parent"/>
+
+    <android.support.design.widget.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:hint="predmet_hint"
+        android:id="@+id/textPredmet"/>
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="#c0c0c0"
+        app:layout_constraintTop_toBottomOf="@id/textPredmet"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/profIme"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line1">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/editProfIme"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="profesor_hint" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="#c0c0c0"
+        app:layout_constraintTop_toBottomOf="@id/profIme"/>
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:hint="Predmet"
+        android:text="godina"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="@+id/akGod"
+        app:layout_constraintBottom_toBottomOf="@+id/akGod"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/akGod"
         />
 
-    <Button
-        android:id="@+id/btnUpisi"
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/akGod"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/line2"
+        app:layout_constraintStart_toEndOf="@id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        >
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editGodina"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <View
+        android:id="@+id/line3"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="#c0c0c0"
+        app:layout_constraintTop_toBottomOf="@id/akGod"/>
+
+    <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="goToSummary"
-        android:text="Unesi" />
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="ects"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/brEcts"
+        app:layout_constraintEnd_toStartOf="@+id/brEcts"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/brEcts"
+        app:layout_constraintVertical_bias="1.0" />
 
-</LinearLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/brEcts"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/line3"
+        app:layout_constraintStart_toEndOf="@id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        >
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editECTS" />
+    </android.support.design.widget.TextInputLayout>
+
+    <View
+        android:id="@+id/line4"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="#c0c0c0"
+        app:layout_constraintTop_toBottomOf="@id/brEcts"/>
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="predavanja"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/brPred"
+        app:layout_constraintEnd_toStartOf="@+id/brPred"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/brPred"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/brPred"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/line4"
+        app:layout_constraintStart_toEndOf="@id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        >
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/editPred"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <View
+        android:id="@+id/line5"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="#c0c0c0"
+        app:layout_constraintTop_toBottomOf="@id/brPred"/>
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="59dp"
+        android:layout_height="24dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="lv"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/brLV"
+        app:layout_constraintEnd_toStartOf="@+id/brLV"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/brLV"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/brLV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/line5"
+        app:layout_constraintStart_toEndOf="@id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        >
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/editLV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+
+
+
+
+    <Button
+        android:id="@+id/btnInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="spremi"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

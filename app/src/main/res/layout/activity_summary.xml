@@ -1,34 +1,217 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".SummaryActivity">
 
     <TextView
-        android:id="@+id/tvStudent"
-        android:layout_width="match_parent"
-        android:layout_height="51dp"
-        android:baselineAligned="false"
-        android:text=""/>
-
-    <TextView
-        android:id="@+id/tvKolegij"
-        android:layout_width="match_parent"
-        android:layout_height="49dp"
-        android:text=""
-        app:layout_constraintTop_toBottomOf="@+id/tvStudent"/>
-
-    <Button
-        android:id="@+id/btnSend"
+        android:id="@+id/txtIme"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="goToActivity1"
-        android:text="Registriraj"
-        tools:layout_editor_absoluteX="140dp"
-        tools:layout_editor_absoluteY="120dp"
-        app:layout_constraintTop_toBottomOf="@+id/tvKolegij"
+        android:text="ime"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/txtPrezime"
+        app:layout_constraintTop_toTopOf="parent
+"
+
         />
-</LinearLayout>
+    <View
+        android:id="@+id/line1"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="#c0c0c0"
+        app:layout_constraintTop_toBottomOf="@id/txtIme"/>
+
+    <TextView
+        android:id="@+id/txtPrezime"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="prezime"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/txtIme"
+        app:layout_constraintTop_toTopOf="parent"
+
+
+
+        />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="#c0c0c0"
+        app:layout_constraintTop_toBottomOf="@id/txtPrezime"/>
+
+    <TextView
+        android:id="@+id/datumRod"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="datum"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/line1"
+        />
+
+    <View
+        android:id="@+id/line3"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="#c0c0c0"
+        app:layout_constraintTop_toBottomOf="@id/datumRod"/>
+
+    <TextView
+        android:id="@+id/nazivPredmet"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="predmet_hint"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/line3"
+        />
+
+    <View
+        android:id="@+id/line4"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="#c0c0c0"
+        app:layout_constraintTop_toBottomOf="@id/nazivPredmet"/>
+
+    <TextView
+        android:id="@+id/profIme"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="profesor_hint"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/line4"
+        />
+
+    <View
+        android:id="@+id/line5"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="#c0c0c0"
+        app:layout_constraintTop_toBottomOf="@id/profIme"/>
+
+    <TextView
+        android:id="@+id/akademskaGodina"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="godina"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/line5"
+        />
+    <View
+        android:id="@+id/line6"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="#c0c0c0"
+        app:layout_constraintTop_toBottomOf="@id/akademskaGodina"/>
+
+    <TextView
+        android:id="@+id/ectsBroj"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ects"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/line6"
+        />
+
+    <View
+        android:id="@+id/line7"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="#c0c0c0"
+        app:layout_constraintTop_toBottomOf="@id/ectsBroj"/>
+
+    <TextView
+        android:id="@+id/predavanjaBroj"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="predavanja"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/line7"
+        />
+
+    <View
+        android:id="@+id/line8"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="#c0c0c0"
+        app:layout_constraintTop_toBottomOf="@id/predavanjaBroj"/>
+
+    <TextView
+        android:id="@+id/lvBroj"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="lv"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/line8"
+        />
+
+
+    <Button
+        android:id="@+id/btnEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="kraj"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+</android.support.constraint.ConstraintLayout>
